@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="svg5821"
+   height="64px"
+   width="64px"
+   sodipodi:docname="Robot_Robot.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="9.4826544"
+     inkscape:cx="19.772945"
+     inkscape:cy="34.642199"
+     inkscape:window-width="1920"
+     inkscape:window-height="1049"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5821" />
+  <defs
+     id="defs5823" />
+  <metadata
+     id="metadata5826">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>[triplus]</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:title>RobotWorkbench</dc:title>
+        <dc:date>2016-02-26</dc:date>
+        <dc:relation>http://www.freecad.org/wiki/index.php?title=Artwork</dc:relation>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>FreeCAD</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:identifier>FreeCAD/src/Mod/Robot/Gui/Resources/icons/RobotWorkbench.svg</dc:identifier>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>FreeCAD LGPL2+</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <cc:license>https://www.gnu.org/copyleft/lesser.html</cc:license>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>[agryson] Alexander Gryson</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3">
+    <path
+       style="fill:#fc6c00;stroke:#2e3436;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 3.6642391,37.007829 C 5.8966776,33.09827 13.553115,16.224742 16.703727,9.315118 19.854339,2.4054944 23.287533,3.525773 26.513685,4.95682 c 3.226162,1.431045 5.743752,3.490938 3.261849,9.918711 -2.481898,6.427773 -10.538507,24.160487 -13.505794,28.945727 -2.967286,4.78524 -6.8235214,3.844154 -9.6471744,2.253731 -2.8236518,-1.590422 -5.1907653,-5.157602 -2.9583265,-9.06716 z"
+       id="path1"
+       sodipodi:nodetypes="zzzzzzz" />
+    <path
+       style="fill:#fc6c00;stroke:#2e3436;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 48.272793,33.658671 C 45.511273,30.103053 35.551543,14.478046 31.457903,8.081849 27.364253,1.6856534 24.123383,3.278946 21.131307,5.150701 c -2.99208,1.871755 -5.19398,4.266135 -1.83032,10.279612 3.36366,6.013477 13.840736,22.432642 17.453266,26.751546 3.61253,4.318904 7.29749,2.843346 9.86861,0.870577 2.57112,-1.972769 4.41146,-5.838147 1.64993,-9.393765 z"
+       id="path1-6"
+       sodipodi:nodetypes="zzzzzzz" />
+    <circle
+       style="fill:#fc6c00;stroke:#2e3436;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path2"
+       cx="25.00589"
+       cy="11.050709"
+       r="0.76930743" />
+    <circle
+       style="fill:#fc6c00;stroke:#2e3436;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path2-56"
+       cx="10.308311"
+       cy="39.332695"
+       r="0.76930743" />
+    <path
+       style="fill:#fc6c00;fill-opacity:1;stroke:#2e3436;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 48.519417,43.304164 1.551046,1.354089 c 0,0 3.044572,-3.040055 6.062035,-1.159503 3.017463,1.880552 4.134544,6.538483 4.355663,7.571756 0.221124,1.033272 -2.132253,-0.108642 -3.008835,-0.817661 -0.876582,-0.709017 -1.984719,-1.630238 -3.805072,-0.271098 -1.820353,1.359141 -2.453467,2.538457 -1.054705,3.955646 1.398764,1.417189 1.928055,2.662644 1.627486,3.101732 -0.300568,0.439089 -6.845499,-0.433767 -7.272675,-2.288198 -0.427177,-1.854431 -0.892801,-4.070999 -0.583611,-5.294918 0.465971,-1.844531 1.731941,-2.822681 1.731941,-2.822681 l -1.521865,-1.633631 z"
+       id="path3"
+       sodipodi:nodetypes="ccssssssssccc" />
+    <circle
+       style="fill:#fc6c00;stroke:#2e3436;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path2-5"
+       cx="42.324886"
+       cy="37.753201"
+       r="0.76930743" />
+    <rect
+       style="fill:#fc6c00;fill-opacity:1;stroke:#2e3436;stroke-width:4;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect3"
+       width="28.251303"
+       height="11.048817"
+       x="2.7867687"
+       y="48.09008" />
+  </g>
+</svg>
