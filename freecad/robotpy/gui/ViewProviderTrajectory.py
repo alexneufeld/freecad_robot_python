@@ -1,6 +1,7 @@
 from freecad.robotpy import ICONPATH
 from os import path
 
+
 # TODO: this needs an attach method, among other things
 class ViewProviderTrajectoryDressUp:
     def __init__(self, vobj):

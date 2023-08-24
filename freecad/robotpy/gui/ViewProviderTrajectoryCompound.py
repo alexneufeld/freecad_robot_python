@@ -1,6 +1,7 @@
 from freecad.robotpy import ICONPATH
 from os import path
-from .TaskDlgTrajectoryCompound import TaskDlgTrajectoryCompound 
+from .TaskDlgTrajectoryCompound import TaskDlgTrajectoryCompound
+
 
 class ViewProviderTrajectoryDressUp:
     def __init__(self, vobj):
@@ -9,15 +10,15 @@ class ViewProviderTrajectoryDressUp:
 
     def getIcon(self):
         return path.join(ICONPATH, "Robot_TrajectoryCompound.svg")
-    
+
     def claimChildren(self):
         return self.Object.Source
-        
-    def setEdit(self,vobj,mode):
+
+    def setEdit(self, vobj, mode):
         taskd = TaskDlgTrajectoryCompound()
         FreeCADGui.Control.showDialog(taskd)
         return True
 
-    def unsetEdit(self,vobj,mode):
+    def unsetEdit(self, vobj, mode):
         FreeCADGui.Control.closeDialog()
         return False

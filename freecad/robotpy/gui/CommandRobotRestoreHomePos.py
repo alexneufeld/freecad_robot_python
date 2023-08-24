@@ -6,17 +6,19 @@ from freecad.robotpy import ICONPATH
 class CmdRobotRestoreHomePos:
     def __init__(self) -> None:
         pass
-    
+
     def IsActive(self):
         if FreeCAD.ActiveDocument is None:
             return False
         else:
             return True
-        
+
     def Activated(self):
         pass
-    
+
     def GetResources(self):
-        return {'Pixmap': path.join(ICONPATH, "Robot_RestoreHomePos.svg"),
-                'MenuText': "Move to home",
-                'ToolTip': "Move to home"}
+        return {
+            "Pixmap": path.join(ICONPATH, "Robot_RestoreHomePos.svg"),
+            "MenuText": "Move to home",
+            "ToolTip": "Move to home",
+        }

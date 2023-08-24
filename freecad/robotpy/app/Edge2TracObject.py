@@ -8,9 +8,24 @@ class Edge2TracObject(TrajectoryObject):
     def __init__(obj, self) -> None:
         super().__init__(self, obj)
         obj.Proxy = self
-        obj.addproperty("App::PropertyLinkSub", "Source", "Edge2Trac", "Edges to generate the Trajectory").Source = None
-        obj.addproperty("App::PropertyFloatConstraint", "SegValue", "Edge2Trac", "Max deviation from original geometry").SegValue = 0.5
-        obj.addproperty("App::PropertyBool", "UseRotation", "Edge2Trac", "Use orientation of the edge").UseRotation = False
+        obj.addproperty(
+            "App::PropertyLinkSub",
+            "Source",
+            "Edge2Trac",
+            "Edges to generate the Trajectory",
+        ).Source = None
+        obj.addproperty(
+            "App::PropertyFloatConstraint",
+            "SegValue",
+            "Edge2Trac",
+            "Max deviation from original geometry",
+        ).SegValue = 0.5
+        obj.addproperty(
+            "App::PropertyBool",
+            "UseRotation",
+            "Edge2Trac",
+            "Use orientation of the edge",
+        ).UseRotation = False
         self.NbrOfEdges = 0
         self.NbrOfCluster = 0
 
@@ -38,4 +53,4 @@ class Edge2TracObject(TrajectoryObject):
                         pass
                     case _:
                         Console.PrintError("Unknown Edge type")
-                        return 
+                        return

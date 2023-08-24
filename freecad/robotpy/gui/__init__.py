@@ -1,4 +1,10 @@
-from .CommandInsertRobot import CmdRobotInsert, CmdRobotInsertKukaIR500, CmdRobotInsertKukaIR16, CmdRobotInsertKukaIR210, CmdRobotInsertKukaIR125
+from .CommandInsertRobot import (
+    CmdRobotInsert,
+    CmdRobotInsertKukaIR500,
+    CmdRobotInsertKukaIR16,
+    CmdRobotInsertKukaIR210,
+    CmdRobotInsertKukaIR125,
+)
 from .CommandToolShape import CmdToolShape
 from .CommandRobotSetHomePos import CmdRobotSetHomePos
 from .CommandRobotRestoreHomePos import CmdRobotRestoreHomePos
