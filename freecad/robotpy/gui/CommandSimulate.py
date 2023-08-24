@@ -3,7 +3,7 @@ import FreeCADGui
 from freecad.robotpy import ICONPATH
 
 
-class CmdToolshape:
+class CmdRobotSimulate:
     def __init__(self) -> None:
         pass
     
@@ -17,6 +17,6 @@ class CmdToolshape:
         pass
     
     def GetResources(self):
-        return {'Pixmap': path.join(ICONPATH, "Robot_CreateRobot.svg"),
-                'MenuText': "Add a tool shape to the robot",
-                'ToolTip': "Add a tool shape to the robot"}
+        return {'Pixmap': path.join(ICONPATH, "Robot_Simulate.svg"),
+                'MenuText': "Simulate a trajectory",
+                'ToolTip': "Run a simulation on a trajectory"}

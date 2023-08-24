@@ -2,5 +2,6 @@ from os import path
 
 ICONPATH = path.join(path.dirname(__file__), "icons")
 RESOURCEPATH = path.join(path.dirname(__file__), "resources")
+UIPATH = path.join(path.dirname(__file__), "ui")
 
-__all__ = ["ICONPATH", "RESOURCEPATH"]
+__all__ = ["ICONPATH", "RESOURCEPATH", "UIPATH"]

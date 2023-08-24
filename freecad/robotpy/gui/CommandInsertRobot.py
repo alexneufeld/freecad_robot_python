@@ -1,6 +1,6 @@
 import FreeCADGui
-from freecad.robotpy import RobotObject
-from freecad.robotpy import ViewProviderRobot
+from freecad.robotpy.gui import RobotObject
+from freecad.robotpy.gui import ViewProviderRobot
 from freecad.robotpy import ICONPATH, RESOURCEPATH
 from os import path
 
@@ -22,8 +22,8 @@ class CmdRobotInsert:
     def Activated(self):
         doc = FreeCADGui.ActiveDocument
         obj = doc.addObject("Part::FeaturePython", "Robot")
-        # RobotObject(obj)
-        # ViewProviderRobot(obj.ViewObject)
+        RobotObject(obj)
+        ViewProviderRobot(obj.ViewObject)
     
     def GetResources(self):
         return {'Pixmap': self.iconpath,

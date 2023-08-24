@@ -3,7 +3,7 @@ import FreeCADGui
 from freecad.robotpy import ICONPATH
 
 
-class CmdToolshape:
+class CmdRobotSetHomePos:
     def __init__(self) -> None:
         pass
     
@@ -17,6 +17,6 @@ class CmdToolshape:
         pass
     
     def GetResources(self):
-        return {'Pixmap': path.join(ICONPATH, "Robot_CreateRobot.svg"),
-                'MenuText': "Add a tool shape to the robot",
-                'ToolTip': "Add a tool shape to the robot"}
+        return {'Pixmap': path.join(ICONPATH, "Robot_SetHomePos.svg"),
+                'MenuText': "Set the home position",
+                'ToolTip': "Set the home position"}
