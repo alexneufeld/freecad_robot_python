@@ -1,8 +1,8 @@
 from os import path
 import FreeCADGui
 from freecad.robotpy import ICONPATH
-from freecad.robotpy import TrajectoryCompound
-from freecad.robotpy.gui import ViewProviderTrajectoryCompound
+from ..app import TrajectoryCompoundObject
+from .ViewProviderTrajectoryCompound import ViewProviderTrajectoryCompound
 
 
 class CmdCreateTrajectoryCompund:
@@ -18,7 +18,7 @@ class CmdCreateTrajectoryCompund:
     def Activated(self):
         doc = FreeCADGui.ActiveDocument
         trc = doc.addObject("Part::FeaturePython", "TrajectoryCompound")
-        TrajectoryCompound(trc)
+        TrajectoryCompoundObject(trc)
         ViewProviderTrajectoryCompound(trc.ViewObject)
 
     def GetResources(self):

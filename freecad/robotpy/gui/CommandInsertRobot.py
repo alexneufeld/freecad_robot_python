@@ -1,6 +1,6 @@
 import FreeCADGui
-from freecad.robotpy.gui import RobotObject
-from freecad.robotpy.gui import ViewProviderRobot
+from ..app import RobotObject
+from .ViewProviderRobotObject import ViewProviderRobotObject
 from freecad.robotpy import ICONPATH, RESOURCEPATH
 from os import path
 
@@ -23,7 +23,7 @@ class CmdRobotInsert:
         doc = FreeCADGui.ActiveDocument
         obj = doc.addObject("Part::FeaturePython", "Robot")
         RobotObject(obj)
-        ViewProviderRobot(obj.ViewObject)
+        ViewProviderRobotObject(obj.ViewObject)
 
     def GetResources(self):
         return {
@@ -41,7 +41,7 @@ class CmdRobotInsertKukaIR500(CmdRobotInsert):
         doc = FreeCADGui.ActiveDocument
         obj = doc.addObject("Part::FeaturePython", "Robot")
         RobotObject(obj)
-        ViewProviderRobot(obj.ViewObject)
+        ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr500_1.wrl")
         obj.RobotKinematicFile = path.join(RESOURCEPATH, "Kuka/kr500_1.csv")
         obj.Axis2 = -90
@@ -59,7 +59,7 @@ class CmdRobotInsertKukaIR16(CmdRobotInsert):
         doc = FreeCADGui.ActiveDocument
         obj = doc.addObject("Part::FeaturePython", "Robot")
         RobotObject(obj)
-        ViewProviderRobot(obj.ViewObject)
+        ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr16.wrl")
         obj.RobotKinematicFile = path.join(RESOURCEPATH, "Kuka/kr16.csv")
         obj.Axis2 = -90
@@ -76,7 +76,7 @@ class CmdRobotInsertKukaIR210(CmdRobotInsert):
         doc = FreeCADGui.ActiveDocument
         obj = doc.addObject("Part::FeaturePython", "Robot")
         RobotObject(obj)
-        ViewProviderRobot(obj.ViewObject)
+        ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr210.WRL")
         obj.RobotKinematicFile = path.join(RESOURCEPATH, "Kuka/kr_210_2.csv")
         obj.Axis2 = -90
@@ -93,7 +93,7 @@ class CmdRobotInsertKukaIR125(CmdRobotInsert):
         doc = FreeCADGui.ActiveDocument
         obj = doc.addObject("Part::FeaturePython", "Robot")
         RobotObject(obj)
-        ViewProviderRobot(obj.ViewObject)
+        ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr125_3.wrl")
         obj.RobotKinematicFile = path.join(RESOURCEPATH, "Kuka/kr_125.csv")
         obj.Axis2 = -90

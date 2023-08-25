@@ -1,7 +1,7 @@
 from FreeCAD import Placement
 
 
-class TrajectoryObject:
+class TrajectoryCompoundObject:
     def __init__(self, obj):
         obj.Proxy = self
         obj.addProperty(
@@ -19,3 +19,4 @@ class TrajectoryObject:
 
     def execute(self, fp):
         pass
+    

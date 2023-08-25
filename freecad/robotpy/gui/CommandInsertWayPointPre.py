@@ -1,0 +1,24 @@
+from os import path
+import FreeCADGui
+from freecad.robotpy import ICONPATH
+
+
+class CmdInsertwayPointPre:
+    def __init__(self) -> None:
+        pass
+
+    def IsActive(self):
+        if FreeCAD.ActiveDocument is None:
+            return False
+        else:
+            return True
+
+    def Activated(self):
+        pass
+
+    def GetResources(self):
+        return {
+            "Pixmap": path.join(ICONPATH, "Robot_InsertWaypointPre.svg"),
+            "MenuText": "Insert preselection position into trajectory",
+            "ToolTip": "Insert preselection position into trajectory",
+        }

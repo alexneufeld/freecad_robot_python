@@ -1,8 +1,8 @@
 from os import path
 import FreeCADGui
 from freecad.robotpy import ICONPATH
-from freecad.robotpy import TrajectoryDressUp
-from freecad.robotpy.gui import ViewProviderTrajectoryDressUp
+from ..app import TrajectoryDressUp
+from .ViewProviderTrajectoryDressUp import ViewProviderTrajectoryDressUp
 
 
 class CmdCreateTrajectory:

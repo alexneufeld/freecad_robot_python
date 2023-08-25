@@ -1,7 +1,7 @@
 from FreeCAD import Console
 from Part import Feature as PartFeature
-from freecad.robotpy import edgecluster, trajectory
-from freecad.robotpy import TrajectoryObject
+# from freecad.robotpy import edgecluster, trajectory
+from .TrajectoryObject import TrajectoryObject
 
 
 class Edge2TracObject(TrajectoryObject):
@@ -30,6 +30,7 @@ class Edge2TracObject(TrajectoryObject):
         self.NbrOfCluster = 0
 
     def execute(self, fp):
+        '''
         if not fp.Source:
             Console.PrintError("No object linked")
             return
@@ -54,3 +55,5 @@ class Edge2TracObject(TrajectoryObject):
                     case _:
                         Console.PrintError("Unknown Edge type")
                         return
+        '''
+        pass

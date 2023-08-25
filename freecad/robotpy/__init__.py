@@ -1,4 +1,6 @@
 from os import path
+# from . import gui
+# from . import app
 
 ICONPATH = path.join(path.dirname(__file__), "icons")
 RESOURCEPATH = path.join(path.dirname(__file__), "resources")

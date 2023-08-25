@@ -1,8 +1,8 @@
 from os import path
 import FreeCADGui
 from freecad.robotpy import ICONPATH
-from freecad.robotpy import Trajectory
-from freecad.robotpy.gui import ViewProviderTrajectory
+from ..app import Trajectory
+from .ViewProviderTrajectory import ViewProviderTrajectory
 
 
 class CmdCreateTrajectory:
