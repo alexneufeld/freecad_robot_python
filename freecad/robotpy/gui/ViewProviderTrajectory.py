@@ -3,7 +3,7 @@ from os import path
 
 
 # TODO: this needs an attach method, among other things
-class ViewProviderTrajectoryDressUp:
+class ViewProviderTrajectory:
     def __init__(self, vobj):
         vobj.Proxy = self
 

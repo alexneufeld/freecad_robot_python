@@ -10,14 +10,17 @@ from .CommandRobotSetHomePos import CmdRobotSetHomePos
 from .CommandRobotRestoreHomePos import CmdRobotRestoreHomePos
 from .CommandCreateTrajectory import CmdCreateTrajectory
 from .CommandCreateTrajectoryDressUp import CmdCreateTrajectoryDressUp
+from .CommandCreateEdge2Trac import CmdCreateEdge2Trac
 from .CommandSimulate import CmdRobotSimulate
 from .CommandInsertWayPoint import CmdInsertwayPoint
-from .CommandInsertWayPoint import CmdInsertwayPointPre
-from .CommandCreateTrajectoryCompund import CmdCreateTrajectoryCompund
+from .CommandInsertWayPointPre import CmdInsertwayPointPre
+from .CommandCreateTrajectoryCompound import CmdCreateTrajectoryCompound
+
+from .TaskDlgTrajectoryDressUpParameter import TaskDlgTrajectoryDressUpParameter
 
 from .ViewProviderRobotObject import ViewProviderRobotObject
 from .ViewProviderTrajectory import ViewProviderTrajectory
-from .ViewProviderTrajectoryDressup import ViewProviderTrajectoryDressup
+from .ViewProviderTrajectoryDressUp import ViewProviderTrajectoryDressUp
 from .ViewProviderTrajectoryCompound import ViewProviderTrajectoryCompound
 from .ViewProviderEdge2Trac import ViewProviderEdge2Trac
 
@@ -32,13 +35,15 @@ __all__ = [
     "CmdRobotRestoreHomePos",
     "CmdCreateTrajectory",
     "CmdCreateTrajectoryDressUp",
-    "CmdCreateTrajectoryCompund",
+    "CmdCreateTrajectoryCompound",
+    "CmdCreateEdge2Trac",
     "CmdRobotSimulate",
     "CmdInsertwayPoint",
     "CmdInsertwayPointPre",
+    "TaskDlgTrajectoryDressUpParameter",
     "ViewProviderRobotObject",
     "ViewProviderTrajectory",
-    "ViewProviderTrajectoryDressup",
+    "ViewProviderTrajectoryDressUp",
     "ViewProviderTrajectoryCompound",
     "ViewProviderEdge2Trac",
 ]

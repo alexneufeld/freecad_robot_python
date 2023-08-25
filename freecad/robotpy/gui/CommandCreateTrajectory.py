@@ -1,7 +1,7 @@
 from os import path
 import FreeCADGui
 from freecad.robotpy import ICONPATH
-from ..app import Trajectory
+from ..app import TrajectoryObject
 from .ViewProviderTrajectory import ViewProviderTrajectory
 
 
@@ -10,15 +10,12 @@ class CmdCreateTrajectory:
         pass
 
     def IsActive(self):
-        if FreeCAD.ActiveDocument is None:
-            return False
-        else:
-            return True
+        return FreeCADGui.ActiveDocument is not None
 
     def Activated(self):
         doc = FreeCADGui.ActiveDocument
         tr = doc.addObject("Part::FeaturePython", "Trajectory")
-        Trajectory(tr)
+        TrajectoryObject(tr)
         ViewProviderTrajectory(tr.ViewObject)
 
     def GetResources(self):

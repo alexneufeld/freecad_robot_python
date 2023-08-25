@@ -2,7 +2,7 @@ from freecad.robotpy import ICONPATH
 from os import path
 
 
-class ViewProviderTrajectoryDressUp:
+class ViewProviderEdge2Trac:
     def __init__(self, vobj):
         vobj.Proxy = self
 

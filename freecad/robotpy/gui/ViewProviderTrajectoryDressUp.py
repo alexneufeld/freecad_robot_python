@@ -1,6 +1,6 @@
 from freecad.robotpy import ICONPATH
 from os import path
-from .TaskDlgTrajectoryDressUp import TaskDlgTrajectoryDressUp
+from .TaskDlgTrajectoryDressUpParameter import TaskDlgTrajectoryDressUpParameter
 
 
 class ViewProviderTrajectoryDressUp:
@@ -17,7 +17,7 @@ class ViewProviderTrajectoryDressUp:
         ]
 
     def setEdit(self, vobj, mode):
-        taskd = TaskDlgTrajectoryDressUp()
+        taskd = TaskDlgTrajectoryDressUpParameter()
         FreeCADGui.Control.showDialog(taskd)
         return True
 

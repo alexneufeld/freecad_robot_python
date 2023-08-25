@@ -10,10 +10,7 @@ class CmdCreateEdge2Trac:
         pass
 
     def IsActive(self):
-        if FreeCAD.ActiveDocument is None:
-            return False
-        else:
-            return True
+        return FreeCADGui.ActiveDocument is not None
 
     def Activated(self):
         doc = FreeCADGui.ActiveDocument

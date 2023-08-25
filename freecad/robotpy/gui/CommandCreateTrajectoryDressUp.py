@@ -1,25 +1,22 @@
 from os import path
 import FreeCADGui
 from freecad.robotpy import ICONPATH
-from ..app import TrajectoryDressUp
+from ..app import TrajectoryDressUpObject
 from .ViewProviderTrajectoryDressUp import ViewProviderTrajectoryDressUp
 
 
-class CmdCreateTrajectory:
+class CmdCreateTrajectoryDressUp:
     def __init__(self) -> None:
         pass
 
     def IsActive(self):
-        if FreeCAD.ActiveDocument is None:
-            return False
-        else:
-            return True
+        return FreeCADGui.ActiveDocument is not None
 
     def Activated(self):
         doc = FreeCADGui.ActiveDocument
         trd = doc.addObject("Part::FeaturePython", "TrajectoryDressUp")
-        Trajectory(trd)
-        ViewProviderTrajectory(trd.ViewObject)
+        TrajectoryDressUpObject(trd)
+        ViewProviderTrajectoryDressUp(trd.ViewObject)
 
     def GetResources(self):
         return {

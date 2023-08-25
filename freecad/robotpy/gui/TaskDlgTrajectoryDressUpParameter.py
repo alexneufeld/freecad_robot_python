@@ -5,12 +5,12 @@ from PySide import QtGui
 from freecad.robotpy import ICONPATH, UIPATH
 
 
-class TaskDlgTrajectoryCompound:
+class TaskDlgTrajectoryDressUpParameter:
     def __init__(self):
         # import GUI from .ui file
         loader = Gui.UiLoader()
         self.form = loader.load(
-            path.join(os.path.dirname(__file__), "TaskTrajectoryCompmoundParameter.ui")  # TODO: make this actually work!
+            path.join(os.path.dirname(__file__), "TaskDlgTrajectoryDressUpParameter.ui")
         )
         self.setupUI()
 

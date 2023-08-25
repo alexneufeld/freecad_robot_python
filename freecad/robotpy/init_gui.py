@@ -20,28 +20,28 @@ class RobotPyWorkbench(FreeCADGui.Workbench):
             CmdRobotRestoreHomePos,
             CmdCreateTrajectory,
             CmdCreateTrajectoryDressUp,
-            CmdCreateTrajectoryCompund,
+            CmdCreateTrajectoryCompound,
             CmdCreateEdge2Trac,
             CmdRobotSimulate,
             CmdInsertwayPoint,
             CmdInsertwayPointPre,
         )
 
-        FreeCADGui.addCommand("RobotPy_Create", CmdRobotInsert)
-        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR500", CmdRobotInsertKukaIR500)
-        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR16", CmdRobotInsertKukaIR16)
-        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR210", CmdRobotInsertKukaIR210)
-        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR125", CmdRobotInsertKukaIR125)
-        FreeCADGui.addCommand("RobotPy_AddToolShape", CmdToolShape)
-        FreeCADGui.addCommand("RobotPy_CreateTrajectory", CmdCreateTrajectory)
-        FreeCADGui.addCommand("RobotPy_InsertWayPoint", CmdInsertwayPoint)
-        FreeCADGui.addCommand("RobotPy_InsertWayPointPreSelect", CmdInsertwayPointPre)
-        FreeCADGui.addCommand("RobotPy_Edge2Trac", CmdCreateEdge2Trac)
-        FreeCADGui.addCommand("RobotPy_TrajectoryDressUp", CmdCreateTrajectoryDressUp)
-        FreeCADGui.addCommand("RobotPy_TrajectoryCompound", CmdCreateTrajectoryCompund)
-        FreeCADGui.addCommand("RobotPy_SetHomePos", CmdRobotSetHomePos)
-        FreeCADGui.addCommand("RobotPy_RestoreHomePos", CmdRobotRestoreHomePos)
-        FreeCADGui.addCommand("RobotPy_Simulate", CmdRobotSimulate)
+        FreeCADGui.addCommand("RobotPy_Create", CmdRobotInsert())
+        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR500", CmdRobotInsertKukaIR500())
+        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR16", CmdRobotInsertKukaIR16())
+        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR210", CmdRobotInsertKukaIR210())
+        FreeCADGui.addCommand("RobotPy_Robot_InsertKukaIR125", CmdRobotInsertKukaIR125())
+        FreeCADGui.addCommand("RobotPy_AddToolShape", CmdToolShape())
+        FreeCADGui.addCommand("RobotPy_CreateTrajectory", CmdCreateTrajectory())
+        FreeCADGui.addCommand("RobotPy_InsertWayPoint", CmdInsertwayPoint())
+        FreeCADGui.addCommand("RobotPy_InsertWayPointPreSelect", CmdInsertwayPointPre())
+        FreeCADGui.addCommand("RobotPy_Edge2Trac", CmdCreateEdge2Trac())
+        FreeCADGui.addCommand("RobotPy_TrajectoryDressUp", CmdCreateTrajectoryDressUp())
+        FreeCADGui.addCommand("RobotPy_TrajectoryCompound", CmdCreateTrajectoryCompound())
+        FreeCADGui.addCommand("RobotPy_SetHomePos", CmdRobotSetHomePos())
+        FreeCADGui.addCommand("RobotPy_RestoreHomePos", CmdRobotRestoreHomePos())
+        FreeCADGui.addCommand("RobotPy_Simulate", CmdRobotSimulate())
         self.toolbar_commands = [
             "RobotPy_Create",
             "RobotPy_CreateTrajectory",
