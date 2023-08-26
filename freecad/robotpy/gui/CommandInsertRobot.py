@@ -1,3 +1,4 @@
+import FreeCAD
 import FreeCADGui
 from ..app import RobotObject
 from .ViewProviderRobotObject import ViewProviderRobotObject
@@ -17,10 +18,17 @@ class CmdRobotInsert:
         return FreeCADGui.ActiveDocument is not None
 
     def Activated(self):
-        doc = FreeCADGui.ActiveDocument
-        obj = doc.addObject("Part::FeaturePython", "Robot")
+        doc = FreeCAD.ActiveDocument
+        obj = doc.addObject("App::FeaturePython", "Robot")
         RobotObject(obj)
         ViewProviderRobotObject(obj.ViewObject)
+        obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr500_1.wrl")
+        obj.RobotKinematicFile = path.join(RESOURCEPATH, "Kuka/kr500_1.csv")
+        obj.Axis2 = -90
+        obj.Axis3 = 90
+        obj.Axis5 = 45
+        obj.Home = [0.0, -90.0, 90.0, 0.0, 45.0, 0.0]
+        doc.recompute()
 
     def GetResources(self):
         return {
@@ -35,8 +43,8 @@ class CmdRobotInsertKukaIR500(CmdRobotInsert):
     tooltip = "Insert a Kuka IR500 into the document."
 
     def Activated(self):
-        doc = FreeCADGui.ActiveDocument
-        obj = doc.addObject("Part::FeaturePython", "Robot")
+        doc = FreeCAD.ActiveDocument
+        obj = doc.addObject("App::FeaturePython", "Robot")
         RobotObject(obj)
         ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr500_1.wrl")
@@ -53,8 +61,8 @@ class CmdRobotInsertKukaIR16(CmdRobotInsert):
     tooltip = "Insert a Kuka IR16 into the document."
 
     def Activated(self):
-        doc = FreeCADGui.ActiveDocument
-        obj = doc.addObject("Part::FeaturePython", "Robot")
+        doc = FreeCAD.ActiveDocument
+        obj = doc.addObject("App::FeaturePython", "Robot")
         RobotObject(obj)
         ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr16.wrl")
@@ -70,8 +78,8 @@ class CmdRobotInsertKukaIR210(CmdRobotInsert):
     tooltip = "Insert a Kuka IR210 into the document."
 
     def Activated(self):
-        doc = FreeCADGui.ActiveDocument
-        obj = doc.addObject("Part::FeaturePython", "Robot")
+        doc = FreeCAD.ActiveDocument
+        obj = doc.addObject("App::FeaturePython", "Robot")
         RobotObject(obj)
         ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr210.WRL")
@@ -87,8 +95,8 @@ class CmdRobotInsertKukaIR125(CmdRobotInsert):
     tooltip = "Insert a Kuka IR125 into the document."
 
     def Activated(self):
-        doc = FreeCADGui.ActiveDocument
-        obj = doc.addObject("Part::FeaturePython", "Robot")
+        doc = FreeCAD.ActiveDocument
+        obj = doc.addObject("App::FeaturePython", "Robot")
         RobotObject(obj)
         ViewProviderRobotObject(obj.ViewObject)
         obj.RobotVrmlFile = path.join(RESOURCEPATH, "Kuka/kr125_3.wrl")

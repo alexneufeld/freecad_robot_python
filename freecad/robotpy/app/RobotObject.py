@@ -2,37 +2,32 @@ from FreeCAD import Console, Placement
 
 
 class RobotObject:
-    def __init__(obj, self) -> None:
+    def __init__(self, obj) -> None:
         obj.Proxy = self
-        obj.addProperty(
-            "App::PropertyFileIncluded",
-            "RobotVrmlFile",
-            "Robot definition",
-            "Included file with the VRML representation of the robot",
-        ).RobotVrmlFile = None
+        obj.addProperty("App::PropertyFileIncluded", "RobotVrmlFile", "Robot definition", "Included file with the VRML representation of the robot").RobotVrmlFile = ""
         obj.addProperty(
             "App::PropertyFileIncluded",
             "RobotKinematicFile",
             "Robot definition",
             "Included file with kinematic definition of the robot Axis",
-        ).RobotKinematicFile = None
+        ).RobotKinematicFile = ""
         obj.addProperty(
             "App::PropertyFloat",
             "Axis1",
             "Robot kinematic",
-            "Axis 1 angle of the robot in degre",
+            "Axis 1 angle of the robot in degre"
         ).Axis1 = 0.0
         obj.addProperty(
             "App::PropertyFloat",
             "Axis2",
             "Robot kinematic",
-            "Axis 1 angle of the robot in degre",
+            "Axis 1 angle of the robot in degre"
         ).Axis2 = 0.0
         obj.addProperty(
             "App::PropertyFloat",
             "Axis3",
             "Robot kinematic",
-            "Axis 1 angle of the robot in degre",
+            "Axis 1 angle of the robot in degre"
         ).Axis3 = 0.0
         obj.addProperty(
             "App::PropertyFloat",
@@ -92,7 +87,7 @@ class RobotObject:
             0,
         ]
 
-    def mustExecute(self):
+    def mustExecute(self, fp):
         return 0
 
     def execute(self, fp):
