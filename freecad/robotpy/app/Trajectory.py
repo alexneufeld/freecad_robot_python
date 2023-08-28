@@ -1,6 +1,7 @@
 from FreeCAD import Placement, Vector
 from math import pi
 from .Waypoint import WaypointType, Waypoint
+from .RobotAlgos import toPlacement
 
 
 class trajectory:
@@ -47,7 +48,7 @@ class trajectory:
 
     def getPosition(time: float) -> Placement:
         if tr := self.generateTrajectory():
-            return None  # FIXME pos2placement(tr.Pos(time))
+            return toPlacement(tr.Pos(time))
         else:
             return None
 

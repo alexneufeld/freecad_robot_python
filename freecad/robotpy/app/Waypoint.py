@@ -1,4 +1,4 @@
-import FreeCAD
+from FreeCAD import Placement
 from dataclass import dataclass
 from enum import Enum, auto
 
