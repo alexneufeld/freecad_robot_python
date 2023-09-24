@@ -84,7 +84,7 @@ class Robot6Axis
         self._Actual[Axis] = self._RotDir
     
     def getAxis(self, Axis: int) -> float:
-        return seld._RotDir[Axis] * (self._Actual[Axis] / (math.pi / 180.0))
+        return self._RotDir[Axis] * (self._Actual[Axis] / (math.pi / 180.0))
     
     def getMaxAngle(self, Axis: int) -> float:
         return self._Max[Axis] * 180.0 / math.pi

@@ -1,7 +1,7 @@
 from FreeCAD import Console, Placement
+from freecad.robotpy.app import Robot6Axis
 
-
-class RobotObject:
+class RobotObject(Robot6Axis):
     def __init__(self, obj) -> None:
         obj.Proxy = self
         obj.addProperty("App::PropertyFileIncluded", "RobotVrmlFile", "Robot definition", "Included file with the VRML representation of the robot").RobotVrmlFile = ""
