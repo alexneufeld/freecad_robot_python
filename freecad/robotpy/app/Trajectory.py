@@ -1,11 +1,11 @@
-from FreeCAD import Placement, Vector
-from math import pi
-from .Waypoint import WaypointType, Waypoint
+import FreeCAD
+from .Waypoint import Waypoint
 from .RobotAlgos import toPlacement
+from typing import Self
 
 
 class trajectory:
-    def __init__(self, tr: trajectory = None) -> None:
+    def __init__(self, tr: Self = None) -> None:
         self._waypoints = []
         self._trajectory = None
         if tr:
@@ -34,25 +34,27 @@ class trajectory:
         """Get the full list of waypoints in this trajectory"""
         return self._waypoints
 
-    def deletelast(n: int) -> None:
+    def deletelast(self, n: int) -> None:
         """delete the last n waypoints"""
         self._waypoints = self._waypoints[:-1*n]
     
     def getLength(self, n: int) -> float:
-        """return the Length (mm) of the Trajectory if -1 or of the Waypoint with the given number"""
+        """return the Length (mm) of the Trajectory if -1 or of the Waypoint with 
+        the given number"""
         raise NotImplementedError("Nope!")
 
-    def getDuration(n: int) -> float:
-        """return the duration (s) of the Trajectory if -1 or of the Waypoint with the given number"""
+    def getDuration(self, n: int) -> float:
+        """return the duration (s) of the Trajectory if -1 or of the Waypoint 
+        with the given number"""
         raise NotImplementedError("Nope!")
 
-    def getPosition(time: float) -> Placement:
+    def getPosition(self, time: float) -> FreeCAD.Placement:
         if tr := self.generateTrajectory():
             return toPlacement(tr.Pos(time))
         else:
             return None
 
-    def getVelocity(time: float) -> Placement:
+    def getVelocity(self, time: float) -> FreeCAD.Placement:
         if tr := self.generated_trajectory:
             vec = tr.Vel(time).vel
             return FreeCAD.Vector(*vec).Length
