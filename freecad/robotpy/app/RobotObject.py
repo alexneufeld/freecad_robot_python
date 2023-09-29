@@ -1,5 +1,5 @@
 from FreeCAD import Console, Placement
-from freecad.robotpy.app import Robot6Axis
+from .Robot6Axis import Robot6Axis
 
 class RobotObject(Robot6Axis):
     def __init__(self, obj) -> None:
