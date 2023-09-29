@@ -2,7 +2,7 @@ import PyKDL
 import FreeCAD
 import csv
 import math
-from dataclass import dataclass
+from dataclasses import dataclass
 from . import RobotAlgos
 import os
 
