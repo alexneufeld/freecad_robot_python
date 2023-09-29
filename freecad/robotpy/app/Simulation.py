@@ -39,9 +39,9 @@ class Simulation:
     def setToWaypoint(n: int) -> None:
         pass  # NOTE: this was blank in the original c++ code!
     
-    def setToTime(t: float) -> None:
+    def setToTime(self, t: float) -> None:
         self.Pos = t
-        NeededPos = self.Trac.getPosition(Pos)
+        NeededPos = self.Trac.getPosition(self.Pos)
         NeededPos =  NeededPos * self.Tool.inverse()
         self.Rob.setTo(NeededPos)
         self.Axis[0] = self.Rob.getAxis(0)
