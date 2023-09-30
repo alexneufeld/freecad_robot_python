@@ -5,25 +5,26 @@ from Part import Feature as PartFeature
 from Part import getSortedClusters
 from .Trajectory import Trajectory
 from .Waypoint import Waypoint
+from .TrajectoryObject import TrajectoryObject
 
 
-class Edge2TracObject():
-    def __init__(obj, self) -> None:
-        super().__init__(self, obj)
+class Edge2TracObject(TrajectoryObject):
+    def __init__(self, obj) -> None:
+        super().__init__(obj)
         obj.Proxy = self
-        obj.addproperty(
+        obj.addProperty(
             "App::PropertyLinkSub",
             "Source",
             "Edge2Trac",
             "Edges to generate the Trajectory",
         ).Source = None
-        obj.addproperty(
+        obj.addProperty(
             "App::PropertyFloatConstraint",
             "SegValue",
             "Edge2Trac",
             "Max deviation from original geometry",
         ).SegValue = 0.5
-        obj.addproperty(
+        obj.addProperty(
             "App::PropertyBool",
             "UseRotation",
             "Edge2Trac",

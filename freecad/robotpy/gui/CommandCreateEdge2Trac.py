@@ -1,5 +1,6 @@
 from os import path
 import FreeCADGui
+import FreeCAD
 from freecad.robotpy import ICONPATH
 from ..app import Edge2TracObject
 from .ViewProviderEdge2Trac import ViewProviderEdge2Trac
@@ -13,10 +14,11 @@ class CmdCreateEdge2Trac:
         return FreeCADGui.ActiveDocument is not None
 
     def Activated(self):
-        doc = FreeCADGui.ActiveDocument
+        doc = FreeCAD.ActiveDocument
         tr = doc.addObject("Part::FeaturePython", "Edge2Trac")
-        TrajectoryCompound(tr)
-        ViewProviderTrajectoryCompound(tr.ViewObject)
+        Edge2TracObject(tr)
+        ViewProviderEdge2Trac(tr.ViewObject)
+        FreeCADGui.ActiveDocument.setEdit(tr)
 
     def GetResources(self):
         return {
