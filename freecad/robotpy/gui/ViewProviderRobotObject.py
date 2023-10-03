@@ -42,6 +42,7 @@ class ViewProviderRobotObject:
         self.Axis5Node = None
         self.Axis6node = None
         self.pcDragger = None
+        self.obj = vobj.Object
         vobj.Proxy = self
 
     def setDragger(self) -> None:
@@ -49,15 +50,12 @@ class ViewProviderRobotObject:
         self.pcDragger = coin.SoJackDragger()
         self.pcDragger.addMotionCallback(self.soDraggerMotionCallback)
         self.pcTcpRoot.addChild(self.pcDragger)
-        # set the actual TCP position
-        # TODO: missing PyKDL bindings for this to work
-        # robObj = static_cast<Robot::RobotObject*>(pcObject);
-        # robObj = pcObject
-        loc = self.obj.Tcp.getValue()
+        # TODO: fix crash here
+        loc = self.obj.Tcp
         M = coin.SbMatrix()
         M.setTransform(
-            coin.SbVec3f(loc.getPosition().x, loc.getPosition().y, loc.getPosition().z),
-            coin.SbRotation(*loc.getRotation()),
+            coin.SbVec3f(*loc.Base),
+            coin.SbRotation(*loc.Rotation.Q),
             coin.SbVec3f(150, 150, 150),
         )
         self.pcDragger.setMotionMatrix(M)
@@ -218,6 +216,42 @@ class ViewProviderRobotObject:
                     coin.SbVec3f(0.0, 1.0, 0.0),
                     obj.Axis6 * pi / 180,
                 )
+        # TODO: we also need to handle the toolshape transformation when handling
+        # the Axis* properties
+        elif prop == "Axis1":
+            if self.Axis1Node:
+                self.Axis1Node.rotation.setValue(
+                    coin.SbVec3f(0.0, 1.0, 0.0), obj.Axis1 * pi / 180
+                )
+        elif prop == "Axis2":
+            if self.Axis2Node:
+                self.Axis2Node.rotation.setValue(
+                    coin.SbVec3f(0.0, 1.0, 0.0), obj.Axis2 * pi / 180
+                )
+        elif prop == "Axis3":
+            if self.Axis3Node:
+                self.Axis3Node.rotation.setValue(
+                    coin.SbVec3f(0.0, 1.0, 0.0), obj.Axis3 * pi / 180
+                )
+        elif prop == "Axis4":
+            if self.Axis4Node:
+                self.Axis4Node.rotation.setValue(
+                    coin.SbVec3f(0.0, 1.0, 0.0), obj.Axis4 * pi / 180
+                )
+        elif prop == "Axis5":
+            if self.Axis5Node:
+                self.Axis5Node.rotation.setValue(
+                    coin.SbVec3f(0.0, 1.0, 0.0), obj.Axis5 * pi / 180
+                )
+        elif prop == "Axis6":
+            if self.Axis6Node:
+                self.Axis6Node.rotation.setValue(
+                    coin.SbVec3f(0.0, 1.0, 0.0), obj.Axis6 * pi / 180
+                )
+        elif prop == "Tcp":
+            pass
+        elif prop == "ToolShape":
+            pass
 
     def setAxisTo(
         self,
@@ -229,7 +263,50 @@ class ViewProviderRobotObject:
         A6: float,
         Tcp: FreeCAD.Placement,
     ) -> None:
-        pass
+        if self.Axis1Node:
+            # FIXME Ugly hack for the wrong transformation of the Kuka 500 robot
+            # VRML the minus sign on Axis 1
+            self.Axis1Node.rotation.setValue(
+                coin.SbVec3f(0.0, 1.0, 0.0), A1 * (pi / 180)
+            )
+        if self.Axis2Node:
+            self.Axis2Node.rotation.setValue(
+                coin.SbVec3f(0.0, 1.0, 0.0), A2 * (pi / 180)
+            )
+        if self.Axis3Node:
+            self.Axis3Node.rotation.setValue(
+                coin.SbVec3f(0.0, 1.0, 0.0), A3 * (pi / 180)
+            )
+        if self.Axis4Node:
+            self.Axis4Node.rotation.setValue(
+                coin.SbVec3f(0.0, 1.0, 0.0), A4 * (pi / 180)
+            )
+        if self.Axis5Node:
+            self.Axis5Node.rotation.setValue(
+                coin.SbVec3f(0.0, 1.0, 0.0), A5 * (pi / 180)
+            )
+        if self.Axis6Node:
+            self.Axis6Node.rotation.setValue(
+                coin.SbVec3f(0.0, 1.0, 0.0), A6 * (pi / 180)
+            )
+        # TODO: handle toolshape here
+        if self.obj.ToolShape:
+            pass
+
+    def soDraggerMotionCallback(self, dragger: coin.SoDragger):
+        q0 = q1 = q2 = q3 = 0.0
+        Tcp = self.obj.Tcp
+        M = dragger.getMotionMatrix()
+        translation = coin.Sbvec3f()
+        rotation = coin.SbRotation()
+        scaleFactor = coin.SbVec3f()
+        scaleOrientation = coin.SbRotation()
+        coin.SbVec3f(*Tcp.getPosition())
+        translation, rotation, scaleFactor, scaleOrientation = M.getTransform()
+        q0, q1, q2, q3 = rotation.getValue()
+        rot = FreeCAD.Rotation(q0, q1, q2, q3)
+        pos = FreeCAD.Vector(*translation)
+        Tcp.setValue(FreeCAD.Placement(pos, rot))
 
     def getIcon(self):
         return path.join(ICONPATH, "Robot_CreateRobot.svg")
