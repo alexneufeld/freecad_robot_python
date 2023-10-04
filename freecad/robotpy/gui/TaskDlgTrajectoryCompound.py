@@ -10,7 +10,9 @@ class TaskDlgTrajectoryCompound:
         # import GUI from .ui file
         loader = Gui.UiLoader()
         self.form = loader.load(
-            path.join(os.path.dirname(__file__), "TaskTrajectoryCompmoundParameter.ui")  # TODO: make this actually work!
+            path.join(
+                os.path.dirname(__file__), "TaskTrajectoryCompmoundParameter.ui"
+            )  # TODO: make this actually work!
         )
         self.setupUI()
 

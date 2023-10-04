@@ -3,15 +3,11 @@ import FreeCAD
 
 
 def toFrame(To: FreeCAD.Placement) -> PyKDL.Frame:
-    return PyKDL.Frame(
-        PyKDL.Rotation.Quaternion(*To.Rotation),
-        PyKDL.Vector(*T.Base)
-    )
+    return PyKDL.Frame(PyKDL.Rotation.Quaternion(*To.Rotation), PyKDL.Vector(*T.Base))
 
 
 def toPlacement(To: PyKDL.Frame) -> FreeCAD.Placement:
-    x,y,z,w = To.M.GetQuaternion()
+    x, y, z, w = To.M.GetQuaternion()
     return FreeCAD.Placement(
-        FreeCAD.Vector(*To.p),
-        FreeCAD.Rotation(*To.M.GetQuaternion())
+        FreeCAD.Vector(*To.p), FreeCAD.Rotation(*To.M.GetQuaternion())
     )

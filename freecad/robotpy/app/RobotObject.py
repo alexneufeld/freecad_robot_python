@@ -1,10 +1,16 @@
 from FreeCAD import Console, Placement
 from .Robot6Axis import Robot6Axis
 
+
 class RobotObject(Robot6Axis):
     def __init__(self, obj) -> None:
         obj.Proxy = self
-        obj.addProperty("App::PropertyFileIncluded", "RobotVrmlFile", "Robot definition", "Included file with the VRML representation of the robot").RobotVrmlFile = ""
+        obj.addProperty(
+            "App::PropertyFileIncluded",
+            "RobotVrmlFile",
+            "Robot definition",
+            "Included file with the VRML representation of the robot",
+        ).RobotVrmlFile = ""
         obj.addProperty(
             "App::PropertyFileIncluded",
             "RobotKinematicFile",
@@ -15,19 +21,19 @@ class RobotObject(Robot6Axis):
             "App::PropertyFloat",
             "Axis1",
             "Robot kinematic",
-            "Axis 1 angle of the robot in degre"
+            "Axis 1 angle of the robot in degre",
         ).Axis1 = 0.0
         obj.addProperty(
             "App::PropertyFloat",
             "Axis2",
             "Robot kinematic",
-            "Axis 1 angle of the robot in degre"
+            "Axis 1 angle of the robot in degre",
         ).Axis2 = 0.0
         obj.addProperty(
             "App::PropertyFloat",
             "Axis3",
             "Robot kinematic",
-            "Axis 1 angle of the robot in degre"
+            "Axis 1 angle of the robot in degre",
         ).Axis3 = 0.0
         obj.addProperty(
             "App::PropertyFloat",

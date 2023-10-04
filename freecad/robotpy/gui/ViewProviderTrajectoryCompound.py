@@ -1,5 +1,6 @@
 from freecad.robotpy import ICONPATH
 from os import path
+
 # from .TaskDlgTrajectoryCompound import TaskDlgTrajectoryCompound
 
 
@@ -13,7 +14,8 @@ class ViewProviderTrajectoryCompound:
 
     def claimChildren(self):
         return self.Object.Source
-    '''
+
+    """
     def setEdit(self, vobj, mode):
         taskd = TaskDlgTrajectoryCompound()
         FreeCADGui.Control.showDialog(taskd)
@@ -22,4 +24,4 @@ class ViewProviderTrajectoryCompound:
     def unsetEdit(self, vobj, mode):
         FreeCADGui.Control.closeDialog()
         return False
-    '''
+    """

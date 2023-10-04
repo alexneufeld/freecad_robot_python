@@ -19,4 +19,3 @@ class TrajectoryCompoundObject:
 
     def execute(self, fp):
         pass
-    
