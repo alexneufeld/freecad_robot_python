@@ -1,25 +1,27 @@
 #!/usr/bin/python3
-import os, sys, string
-import FreeCAD, FreeCADGui, Robot, RobotGui
+import tempfile
+import FreeCADGui
 
 x = 1920
 y = 1080
 Background = "White"
 
-OutDir = "c:/temp/Movie/"
+OutDir = tempfile.gettempdir()
 
-Trajectory = None
-Robot = None
-
-
-def run():
+def run(Robot, Trajectory):
     Tool = Robot.Tool
     Tool = Tool.inverse()
     # duration in seconds time the pictures per second gives the size
     size = int(Trajectory.Duration * 24.0)
-    for l in range(size):
-        Robot.Tcp = Trajectory.position(l / 24.0).multiply(Tool)
+    for x in range(size):
+        Robot.Tcp = Trajectory.position(x / 24.0).multiply(Tool)
         FreeCADGui.updateGui()
         FreeCADGui.ActiveDocument.ActiveView.saveImage(
-            OutDir + "Rob_" + l + ".jpg", x, y, "White"
+            OutDir + "Rob_" + x + ".jpg", x, y, "White"
         )
+
+
+if __name__ == "__main__":
+    # attempt to run using the currently selected items.
+    # This assumes that a Robot object, then a trajectory were selected.
+    run(FreeCADGui.Selection.getSelection())

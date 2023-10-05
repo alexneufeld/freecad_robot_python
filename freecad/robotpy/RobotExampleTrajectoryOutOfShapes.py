@@ -8,7 +8,7 @@ FirstPos2 = None
 LastPos2 = None
 SortedEdgeList = []
 for so in Gui.Selection.getSelectionEx():
-    for edge in obj.SubObjects:
+    for edge in so.SubObjects:
         if edge.Type != "Part::TopoShape":
             continue
         pos1 = edge.valueAt(0)
