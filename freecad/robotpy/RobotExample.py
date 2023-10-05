@@ -37,7 +37,7 @@ print(rob.Axis2)
 w = Waypoint(Placement(), name="Pt", type="LIN")
 print(w.Name, w.Type, w.Pos, w.Cont, w.Velocity, w.Base, w.Tool)
 
-# generate more. 
+# generate more.
 # The Trajectory find always outomatically a unique name for the waypoints
 tr_list = [w]
 for i in range(5):
@@ -68,7 +68,7 @@ if FreeCAD.activeDocument() is None:
     FreeCAD.newDocument()
 
 FreeCAD.activeDocument().addObject("Robot::RobotObject", "Robot")
-# Define the visual representation and the kinematic definition 
+# Define the visual representation and the kinematic definition
 # (see [[6-Axis Robot]] for details about that)
 FreeCAD.activeDocument().Robot.RobotVrmlFile = (
     FreeCAD.getResourceDir() + "Mod/Robot/Lib/Kuka/kr500_1.wrl"
@@ -112,7 +112,7 @@ print(FreeCAD.activeDocument().Trajectory.Trajectory)
 # To be done..... ;-)
 
 # === Exporting the trajectory ===
-# the Trajectory is exported by python. 
+# the Trajectory is exported by python.
 # That means for every Control Cabinet type is a Post processor
 # python module. Here is in detail the Kuka Postprocessor described
 

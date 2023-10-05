@@ -22,7 +22,7 @@ class CmdCreateTrajectoryDressUp:
         return {
             "Pixmap": path.join(ICONPATH, "Robot_CreateTrajectory.svg"),
             "MenuText": "Create a dress-up object which "
-                "overrides some aspects of a trajectory",
+            "overrides some aspects of a trajectory",
             "ToolTip": "Create a dress-up object which "
-                "overrides some aspects of a trajectory",
+            "overrides some aspects of a trajectory",
         }

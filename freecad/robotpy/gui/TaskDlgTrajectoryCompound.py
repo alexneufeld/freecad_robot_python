@@ -10,9 +10,7 @@ class TaskDlgTrajectoryCompound:
         # import GUI from .ui file
         loader = FreeCADGui.UiLoader()
         self.form = loader.load(
-            os.path.join(
-                UIPATH, "TaskTrajectoryCompmoundParameter.ui"
-            )
+            os.path.join(UIPATH, "TaskTrajectoryCompmoundParameter.ui")
         )
         self.setupUI()
 

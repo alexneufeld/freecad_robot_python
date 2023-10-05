@@ -8,6 +8,7 @@ Background = "White"
 
 OutDir = tempfile.gettempdir()
 
+
 def run(Robot, Trajectory):
     Tool = Robot.Tool
     Tool = Tool.inverse()
