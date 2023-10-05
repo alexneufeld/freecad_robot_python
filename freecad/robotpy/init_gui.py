@@ -91,12 +91,14 @@ class RobotPyWorkbench(FreeCADGui.Workbench):
     def ContextMenu(self, recipient):
         """This function is executed whenever the user right-clicks on screen"""
         # "recipient" will be either "view" or "tree"
-        # self.appendContextMenu("My commands", self.list) # add commands to the context menu
+        # add commands to the context menu
+        # self.appendContextMenu("My commands", self.list)
         pass
 
     def GetClassName(self):
         # This function is mandatory if this is a full Python workbench
-        # This is not a template, the returned string should be exactly "Gui::PythonWorkbench"
+        # This is not a template,
+        # the returned string should be exactly "Gui::PythonWorkbench"
         return "Gui::PythonWorkbench"
 
 
