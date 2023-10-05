@@ -1,4 +1,4 @@
-from FreeCAD import Console, Placement
+import FreeCAD
 
 ContTypeEnums = [
     "DontChange",
@@ -52,7 +52,7 @@ class TrajectoryDressUpObject:
             "PosAdd",
             "TrajectoryDressUp",
             "Position & Orientation to use",
-        ).PosAdd = Placement()
+        ).PosAdd = FreeCAD.Placement()
         obj.addProperty(
             "App::PropertyEnumeration",
             "AddType",

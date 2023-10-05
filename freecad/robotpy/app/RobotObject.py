@@ -1,4 +1,4 @@
-from FreeCAD import Console, Placement
+import FreeCAD
 from .Robot6Axis import Robot6Axis
 
 
@@ -62,19 +62,19 @@ class RobotObject(Robot6Axis):
         ).Error = ""
         obj.addProperty(
             "App::PropertyPlacement", "Tcp", "Robot kinematic", "Tcp of the robot"
-        ).Tcp = Placement()
+        ).Tcp = FreeCAD.Placement()
         obj.addProperty(
             "App::PropertyPlacement",
             "Base",
             "Robot kinematic",
             "Actual base frame of the robot",
-        ).Base = Placement()
+        ).Base = FreeCAD.Placement()
         obj.addProperty(
             "App::PropertyPlacement",
             "Tool",
             "Robot kinematic",
             "Tool frame of the robot (Tool)",
-        ).Tool = Placement()
+        ).Tool = FreeCAD.Placement()
         obj.addProperty(
             "App::PropertyLink",
             "ToolShape",
@@ -86,7 +86,7 @@ class RobotObject(Robot6Axis):
             "ToolBase",
             "Robot definition",
             "Defines where to connect the ToolShape",
-        ).ToolBase = Placement()
+        ).ToolBase = FreeCAD.Placement()
         obj.addProperty(
             "App::PropertyFloatList", "Home", "Robot kinematic" "Axis position for home"
         ).Home = [
