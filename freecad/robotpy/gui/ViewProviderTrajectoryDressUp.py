@@ -1,3 +1,4 @@
+import FreeCADGui
 from freecad.robotpy import ICONPATH
 from os import path
 from .TaskDlgTrajectoryDressUpParameter import TaskDlgTrajectoryDressUpParameter

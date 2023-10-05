@@ -21,6 +21,8 @@ class CmdCreateTrajectoryDressUp:
     def GetResources(self):
         return {
             "Pixmap": path.join(ICONPATH, "Robot_CreateTrajectory.svg"),
-            "MenuText": "Create a dress-up object which overrides some aspects of a trajectory",
-            "ToolTip": "Create a dress-up object which overrides some aspects of a trajectory",
+            "MenuText": "Create a dress-up object which "
+                "overrides some aspects of a trajectory",
+            "ToolTip": "Create a dress-up object which "
+                "overrides some aspects of a trajectory",
         }
