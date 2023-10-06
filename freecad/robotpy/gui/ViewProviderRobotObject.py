@@ -1,4 +1,4 @@
-from freecad.robotpy import ICONPATH
+from .data_paths import ICONPATH
 
 # from freecad.robotpy import RobotObject
 import FreeCAD

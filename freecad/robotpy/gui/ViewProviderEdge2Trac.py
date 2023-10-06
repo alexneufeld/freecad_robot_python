@@ -1,4 +1,4 @@
-from freecad.robotpy import ICONPATH
+from .data_paths import ICONPATH
 from os import path
 import FreeCADGui
 from .TaskDlgEdge2Trac import TaskDlgEdge2Trac

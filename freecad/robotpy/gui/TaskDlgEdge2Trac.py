@@ -1,5 +1,5 @@
 import FreeCADGui
-from freecad.robotpy import ICONPATH, UIPATH
+from .data_paths import ICONPATH, UIPATH
 import os
 from PySide import QtGui
 

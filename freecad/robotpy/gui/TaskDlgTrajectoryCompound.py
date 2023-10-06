@@ -2,7 +2,7 @@ import os
 import FreeCADGui
 import FreeCAD
 from PySide import QtGui
-from freecad.robotpy import ICONPATH, UIPATH
+from .data_paths import ICONPATH, UIPATH
 
 
 class TaskDlgTrajectoryCompound:

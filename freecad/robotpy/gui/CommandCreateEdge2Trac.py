@@ -1,7 +1,7 @@
 from os import path
 import FreeCADGui
 import FreeCAD
-from freecad.robotpy import ICONPATH
+from .data_paths import ICONPATH
 from ..app import Edge2TracObject
 from .ViewProviderEdge2Trac import ViewProviderEdge2Trac
 

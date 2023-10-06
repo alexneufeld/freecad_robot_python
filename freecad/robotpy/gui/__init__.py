@@ -1,3 +1,8 @@
+from .data_paths import (
+    ICONPATH,
+    RESOURCEPATH,
+    UIPATH,
+)
 from .CommandInsertRobot import (
     CmdRobotInsert,
     CmdRobotInsertKukaIR500,
@@ -25,6 +30,9 @@ from .ViewProviderTrajectoryCompound import ViewProviderTrajectoryCompound
 from .ViewProviderEdge2Trac import ViewProviderEdge2Trac
 
 __all__ = [
+    "ICONPATH",
+    "RESOURCEPATH",
+    "UIPATH",
     "CmdRobotInsert",
     "CmdRobotInsertKukaIR500",
     "CmdRobotInsertKukaIR16",

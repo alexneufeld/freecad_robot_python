@@ -2,7 +2,7 @@ import FreeCAD
 import FreeCADGui
 from ..app import RobotObject
 from .ViewProviderRobotObject import ViewProviderRobotObject
-from freecad.robotpy import ICONPATH, RESOURCEPATH
+from .data_paths import ICONPATH, RESOURCEPATH
 from os import path
 
 

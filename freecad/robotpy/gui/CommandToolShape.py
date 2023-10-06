@@ -1,6 +1,6 @@
 from os import path
 import FreeCADGui
-from freecad.robotpy import ICONPATH
+from .data_paths import ICONPATH
 
 
 class CmdToolShape:

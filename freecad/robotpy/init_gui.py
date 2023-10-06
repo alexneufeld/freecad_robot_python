@@ -1,5 +1,5 @@
 import FreeCADGui
-from freecad.robotpy import ICONPATH
+from freecad.robotpy.gui import ICONPATH
 from os import path
 
 

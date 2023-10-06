@@ -4,6 +4,8 @@ from .TrajectoryObject import TrajectoryObject
 from .TrajectoryDressUpObject import TrajectoryDressUpObject
 from .TrajectoryCompoundObject import TrajectoryCompoundObject
 from .Robot6Axis import Robot6Axis
+from .Waypoint import WaypointType
+from .Waypoint import Waypoint
 
 __all__ = [
     "Edge2TracObject",
@@ -12,4 +14,6 @@ __all__ = [
     "TrajectoryObject",
     "TrajectoryCompoundObject",
     "Robot6Axis",
+    "WaypointType",
+    "Waypoint",
 ]
